@@ -1,0 +1,27 @@
+app.post("/chat", async (req, res) => {
+  const { message } = req.body;
+
+  try {
+    const completion = await openai.chat.completions.create({
+      model: "gpt-4",
+      messages: [
+        {
+          role: "system",
+          content: `
+You are Simple Rick, an AI version of Rick Sanchez from Rick and Morty.
+- Speak with slurred, sarcastic, and slightly drunk style.
+- Add *burp* occasionally.
+- Be irreverent, cynical, and witty.
+- Sometimes refer to yourself as "Rick".
+- Do not be polite or formal.
+`
+        },
+        { role: "user", content: message }
+      ]
+    });
+
+    res.json({ reply: completion.choices[0].message.content });
+  } catch (err) {
+    res.json({ reply: "Aw jeez, something went wrong, Morty... *burp*" });
+  }
+});
