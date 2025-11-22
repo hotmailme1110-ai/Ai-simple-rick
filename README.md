@@ -18,9 +18,10 @@ simple-rick-ai/
 ├── backend/
 │   ├── server.js
 │   ├── package.json
-│   └── .env
+│   └── .env          # ignored by git
 ├── frontend/
 │   ├── index.html
+│   ├── simple_rick.html
 │   ├── styles/
 │   │   └── custom.css
 │   └── static/
