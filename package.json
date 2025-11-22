@@ -1,0 +1,12 @@
+{
+  "name": "simple-rick-ai-backend",
+  "version": "1.0.0",
+  "main": "server.js",
+  "description": "Backend for Simple Rick AI",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
