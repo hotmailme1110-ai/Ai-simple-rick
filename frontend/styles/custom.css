@@ -1,1 +1,12 @@
+body {
+    font-family: 'Cloister Black', 'Old English Text MT', serif;
+    color: white;
+    background: #1a1a1a;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
 
+/* You can still keep red/green color styling for letters/numbers */
+.letter { color: #ff6b6b; font-weight: bold; }
+.number { color: #00d8a0; font-weight: bold; }
